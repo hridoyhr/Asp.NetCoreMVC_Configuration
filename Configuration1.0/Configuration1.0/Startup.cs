@@ -45,6 +45,25 @@ namespace Configuration1._0
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            //Configure Service method
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+
+                options.LoginPath = "/Account/Signin";
+                options.AccessDeniedPath = "/Account/AccessDeniedPath";
+                options.SlidingExpiration = true;
+            });
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(100);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+            
+
             //Configure any appsettings section
             services.Configure<SmtpConfiguration>(Configuration.GetSection("Smtp"));
 
