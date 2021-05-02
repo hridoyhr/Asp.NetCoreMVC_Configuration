@@ -23,10 +23,10 @@ namespace Configuration1._0
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettinngs{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
 
-             WebHostEnvironment = env;
+            WebHostEnvironment = env;
             Configuration = builder.Build();
         }
 
