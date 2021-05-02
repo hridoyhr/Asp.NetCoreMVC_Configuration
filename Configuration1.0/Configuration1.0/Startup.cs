@@ -30,7 +30,6 @@ namespace Configuration1._0
             WebHostEnvironment = env;
             Configuration = builder.Build();
         }
-
         public IConfiguration Configuration { get; }
         public IWebHostEnvironment WebHostEnvironment { get; set; }
 
@@ -52,17 +51,16 @@ namespace Configuration1._0
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
 
                 options.LoginPath = "/Account/Signin";
-                options.AccessDeniedPath = "/Account/AccessDeniedPath";
+                options.AccessDeniedPath = "/Account/AccessDenied";
                 options.SlidingExpiration = true;
             });
-
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromSeconds(100);
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
-            
+
 
             //Configure any appsettings section
             services.Configure<SmtpConfiguration>(Configuration.GetSection("Smtp"));
@@ -101,7 +99,7 @@ namespace Configuration1._0
             {
                 endpoints.MapControllerRoute(
                         name: "areas",
-                        pattern: "{area= exists}/{controller=Dashboard}/{action=Index}/{Id?}"
+                        pattern:"{area:exists}/{controller=Dashboard}/{action=Index}/{Id?}"
                     );
 
                 endpoints.MapControllerRoute(
