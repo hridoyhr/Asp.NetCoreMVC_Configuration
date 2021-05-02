@@ -1,4 +1,5 @@
 using Configuration1._0.Data;
+using Configuration1._0.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -44,6 +45,9 @@ namespace Configuration1._0
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+            //Configure any appsettings section
+            services.Configure<SmtpConfiguration>(Configuration.GetSection("Smtp"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
