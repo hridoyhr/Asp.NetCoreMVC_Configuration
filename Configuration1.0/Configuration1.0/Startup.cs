@@ -44,10 +44,15 @@ namespace Configuration1._0
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
 
             //Configure any appsettings section
             services.Configure<SmtpConfiguration>(Configuration.GetSection("Smtp"));
+
+            //Others Configuration
+            services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
+            services.AddRazorPages();
+            services.AddDatabaseDeveloperPageExceptionFilter();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
