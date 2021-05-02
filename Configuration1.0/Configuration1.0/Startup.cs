@@ -76,12 +76,18 @@ namespace Configuration1._0
 
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                        name: "areas",
+                        pattern: "{area= exists}/{controller=Dashboard}/{action=Index}/{Id?}"
+                    );
+
+                endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Dashboard}/{action=Summary}/{id?}");
+                    pattern: "{controller=Dashboard}/{action=Summary}/{Id?}");
                 endpoints.MapRazorPages();
             });
         }
