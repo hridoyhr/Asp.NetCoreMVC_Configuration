@@ -1,4 +1,5 @@
 using ConfigDemo5._0.Data;
+using ConfigDemo5._0.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -42,7 +43,16 @@ namespace ConfigDemo5._0
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //Configure any appsettings section.
+            //Smtp Configuration
+            services.Configure<SmtpConfiguration>(Configuration.GetSection("Smtp"));
+
+            //add some configuration
             services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
+            services.AddRazorPages();
+            services.AddDatabaseDeveloperPageExceptionFilter();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
