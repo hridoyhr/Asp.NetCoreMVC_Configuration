@@ -1,3 +1,5 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using ConfigDemo5._0.Data;
 using ConfigDemo5._0.Models;
 using Microsoft.AspNetCore.Builder;
@@ -32,7 +34,7 @@ namespace ConfigDemo5._0
         }
         public IConfiguration Configuration { get; }
         public IWebHostEnvironment WebHostEnvironment { get; set; }
-
+        public static ILifetimeScope AutofacContainer { get; set; }
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -76,6 +78,9 @@ namespace ConfigDemo5._0
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //In top of Configure method add
+            AutofacContainer = app.ApplicationServices.GetAutofacRoot();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
