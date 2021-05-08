@@ -447,3 +447,5 @@ G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\Asp.Net
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\Asp.NetCore5.1Configuration\Asp.NetCoreMVC_Configuration\ConfigDemo5.0\ConfigDemo5.0\bin\Debug\net5.0\Serilog.Sinks.Console.dll
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\Asp.NetCore5.1Configuration\Asp.NetCoreMVC_Configuration\ConfigDemo5.0\ConfigDemo5.0\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
 G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\Asp.NetCore5.1Configuration\Asp.NetCoreMVC_Configuration\ConfigDemo5.0\ConfigDemo5.0\bin\Debug\net5.0\Serilog.Sinks.File.dll
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\Asp.NetCore5.1Configuration\Asp.NetCoreMVC_Configuration\ConfigDemo5.0\ConfigDemo5.0\bin\Debug\net5.0\Autofac.dll
+G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\Asp.NetCore5.1Configuration\Asp.NetCoreMVC_Configuration\ConfigDemo5.0\ConfigDemo5.0\bin\Debug\net5.0\Autofac.Extensions.DependencyInjection.dll
