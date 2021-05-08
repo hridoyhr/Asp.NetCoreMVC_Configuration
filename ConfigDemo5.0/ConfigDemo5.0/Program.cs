@@ -46,7 +46,7 @@ namespace ConfigDemo5._0
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .UseServiceProviderFactory(new 
+                .UseServiceProviderFactory(new
                 AutofacServiceProviderFactory())
                 .UseSerilog()
                 .ConfigureWebHostDefaults(webBuilder =>

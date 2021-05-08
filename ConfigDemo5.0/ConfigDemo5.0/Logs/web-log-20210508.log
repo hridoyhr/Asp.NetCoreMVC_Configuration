@@ -1,1 +1,36 @@
 2021-05-08 22:48:55.581 +06:00 [INF] Application Starting started
+2021-05-08 23:39:24.423 +06:00 [INF] Application Starting started
+2021-05-08 23:39:24.688 +06:00 [FTL] Application Started Failed
+System.ArgumentException: The type 'ConfigDemo5._0.Services.SimpleDatabaseService' is not assignable to service 'ConfigDemo5._0.Services.IDriverService'.
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration(Guid id, RegistrationData data, IInstanceActivator activator, IResolvePipelineBuilder pipelineBuilder, Service[] services, IComponentRegistration target)
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration[TLimit,TActivatorData,TSingleRegistrationStyle](IRegistrationBuilder`3 builder)
+   at Autofac.Builder.RegistrationBuilder.RegisterSingleComponent[TLimit,TActivatorData,TSingleRegistrationStyle](IComponentRegistryBuilder cr, IRegistrationBuilder`3 builder)
+   at Autofac.RegistrationExtensions.<>c__DisplayClass37_0`1.<RegisterType>b__0(IComponentRegistryBuilder cr)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.UpdateRegistry(IComponentRegistryBuilder componentRegistry)
+   at Autofac.Module.Configure(IComponentRegistryBuilder componentRegistry)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProviderFactory.CreateServiceProvider(ContainerBuilder containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at ConfigDemo5._0.Program.Main(String[] args) in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\Asp.NetCore5.1Configuration\Asp.NetCoreMVC_Configuration\ConfigDemo5.0\ConfigDemo5.0\Program.cs:line 34
+2021-05-08 23:45:29.987 +06:00 [INF] Application Starting started
+2021-05-08 23:45:30.209 +06:00 [FTL] Application Started Failed
+System.ArgumentException: The type 'ConfigDemo5._0.Services.SimpleDatabaseService' is not assignable to service 'ConfigDemo5._0.Services.IDriverService'.
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration(Guid id, RegistrationData data, IInstanceActivator activator, IResolvePipelineBuilder pipelineBuilder, Service[] services, IComponentRegistration target)
+   at Autofac.Builder.RegistrationBuilder.CreateRegistration[TLimit,TActivatorData,TSingleRegistrationStyle](IRegistrationBuilder`3 builder)
+   at Autofac.Builder.RegistrationBuilder.RegisterSingleComponent[TLimit,TActivatorData,TSingleRegistrationStyle](IComponentRegistryBuilder cr, IRegistrationBuilder`3 builder)
+   at Autofac.RegistrationExtensions.<>c__DisplayClass37_0`1.<RegisterType>b__0(IComponentRegistryBuilder cr)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.UpdateRegistry(IComponentRegistryBuilder componentRegistry)
+   at Autofac.Module.Configure(IComponentRegistryBuilder componentRegistry)
+   at Autofac.ContainerBuilder.Build(IComponentRegistryBuilder componentRegistry, Boolean excludeDefaultModules)
+   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProviderFactory.CreateServiceProvider(ContainerBuilder containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at ConfigDemo5._0.Program.Main(String[] args) in G:\All C# File\Dev Skill All Course\Asp.NetCoreMvc-AllFile-B5\SourceCode\Asp.NetCore5.1Configuration\Asp.NetCoreMVC_Configuration\ConfigDemo5.0\ConfigDemo5.0\Program.cs:line 34
+2021-05-08 23:47:51.627 +06:00 [INF] Application Starting started
