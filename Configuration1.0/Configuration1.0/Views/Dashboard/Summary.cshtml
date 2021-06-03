@@ -4,6 +4,28 @@
     Layout = "_Layout-Summary";
 }
 
+@section Styles
+{
+    <style>
+        h1{
+            color: green;
+        }
+    </style>
+}
 <h1>This is Summary</h1>
 <p>@Model.SummaryText</p>
+
+@section Footer
+{
+    <partial name="/Views/Shared/_Footer_Partial.cshtml"/>
+}
+
+@section Scripts
+{
+    <script type="text/javascript">
+        alert("hello")
+    </script>
+}
+
+
 
